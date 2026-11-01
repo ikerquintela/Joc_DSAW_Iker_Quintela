@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc d'encertar paraules</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scriptjoc.js" defer></script>
+</head>
+<body>
+    <main class="game-menu">
+        <h1 id="game-title">Joc d'encertar paraules</h1>
+        <section class="information">
+            <div class="info-item">
+                <h2>Jugador actual</h2>
+                <p id="current-player">-</p>
+            </div>
+
+            <div class="info-item">
+                <h2>Puntuació</h2>
+                <p id="score">0</p>
+            </div>
+
+            <div class="info-item">
+                <h2>Intents incorrectes</h2>
+                <p id="errors">0 / 9</p>
+            </div>
+        </section>
+
+        <div class="actions">
+            <button type="button" id="back-button">Tornar al menú</button>
+            <button type="button" id="instructions-button">Instruccions</button>
+        </div>
+
+        <section class="game-options">
+            <label class="name-field" for="secret-word">
+                <span>Introdueix la paraula secreta:</span>
+                <input type="password" id="secret-word" placeholder="Introdueix una paraula">
+            </label>
+
+            <button type="button" id="toggle-word">Mostrar paraula</button>
+
+            <button type="button" id="start-game">Començar joc</button>
+        </section>
+
+        <section class="information">
+            <h2>Paraula</h2>
+            <p id="hidden-word">_ _ _ _</p>
+        </section>
+
+        <p id="game-message"></p>
+
+        <section class="information">
+            <h2>Lletres</h2>
+            <div id="letter-buttons"></div>
+        </section>
+
+        <dialog id="error-dialog">
+            <p id="error-message"></p>
+            <button type="button" id="close-dialog">Tancar</button>
+        </dialog>
+
+    </main>
+</body>
+</html>

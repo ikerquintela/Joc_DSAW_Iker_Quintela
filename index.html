@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc d'encertar paraules</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main class="game-menu">
+        <h1>Joc encertar paraula</h1>
+
+        <form class="game-options" id="game-form">
+            <fieldset>
+                <legend>Tria els jugadors</legend>
+
+                <div class="player-options">
+                    <label><input type="radio" name="players" value="1" checked> 1 jugador</label>
+                    <label><input type="radio" name="players" value="2"> 2 jugadors</label>
+                </div>
+            </fieldset>
+
+            <label class="name-field" for="player-name">
+                <span>Escriu el nom del jugador 1:</span>
+                <span class="name-hint" id="player-name-hint">
+                    Entre 4 i 14 caràcters: lletres, números i _
+                </span>
+
+                <input id="player-name" name="player-name" type="text" placeholder="Escriu el teu nom">
+                <span id="player-name-message"></span>
+            </label>
+
+            <label class="name-field" id="second-player-field" for="player-two-name">
+                <span>Escriu el nom del jugador 2:</span>
+                <span class="name-hint" id="player-two-name-hint">
+                    Entre 4 i 14 caràcters: lletres, números i _
+                </span>
+
+                <input id="player-two-name" name="player-two-name" type="text" placeholder="Escriu el nom del jugador 2">
+                <span id="player-two-name-message"></span>
+            </label>
+        </form>
+
+        <section class="information" aria-label="Informació del joc">
+
+            <div class="info-item">
+                <h2>Puntuació més alta</h2>
+                <p id="high-score">No hi ha puntuació actual</p>
+            </div>
+
+            <div class="info-item">
+                <h2>Informació navegador</h2>
+                <p id="browser-info"></p>
+            </div>
+
+            <div class="info-item">
+                <h2>Idioma del joc</h2>
+                <p id="language-info"></p>
+            </div>
+
+            <div class="info-item">
+                <h2>Informació URL</h2>
+                <p id="link-info"></p>
+            </div>
+        </section>
+
+        <div class="actions">
+            <button type="button" id="start-button">Començar partida</button>
+            <button type="button" id="clear-score-button">Esborrar puntuació</button>
+        </div>
+    </main>
+</body>
+</html>
